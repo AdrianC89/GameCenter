@@ -1,0 +1,272 @@
+/* Estilos para la página */
+body {
+  /* Configuración de la imagen de fondo */
+  background-image: url(../../Assets/tateti/rm222batch5-mind-09.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#pantalla-inicial{
+  display: block;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background:rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 20px; 
+}
+#pantalla-inicial h1{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  color:#0a597a;
+}
+
+#pantalla-inicial p{
+  font-weight: bolder;
+  color:#080808;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+#comenzar{
+  background-color: #c466fc;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 0 20px;
+  border-radius: 30px;
+  border-bottom: 4px solid #4b0872;
+}
+
+#comenzar:hover{
+  border-bottom: 4px solid transparent;
+  background-color: #7705b9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px); /* Ajusta el valor en función del tamaño de tu footer */
+  margin-bottom: 100px; /* Ajusta el valor en función del tamaño de tu footer */
+}
+
+#game-status {
+  /* Mantén el estilo original del game-status */
+  float: left;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 15%, rgba(57,4,77,1), rgba(116,9,121,1));
+  box-shadow: 0 0 0.2em rgba(249, 248, 252, 0.629), 0 0 0.5em rgba(95, 174, 226, 0.748) ;
+  border-radius: 10% 0;
+  font-size: 0.8rem; 
+  color: aliceblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  width: 30%;
+  max-width: 30%; /* Ajusta el ancho máximo en porcentaje según sea necesario */
+  overflow: auto; /* Añade un desplazamiento horizontal en caso de que el contenido supere el ancho máximo */
+}
+
+/* Estilos para el tablero del juego */
+#hangman-board {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#hangman-container{
+  float: left;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#word-container {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#guesses {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#attempts {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#hangman {
+  padding: 0;
+  max-width: 70%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#keyboard {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#keyboard button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px aliceblue solid;
+  background-color: #a200ff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#keyboard button:disabled {
+  background-color: #ccc;
+}
+#keyboard button:disabled:hover {
+  background-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+#keyboard button:hover {
+  background-color: #5eaee7;
+  color: #a200ff;
+  font-weight: bolder;
+  transition: 0.2s;
+}
+#keyboard button {
+  margin: 5px; /* Ajusta el margen entre los botones del teclado */
+}
+/* Estilos para el mensaje de victoria y pérdida */
+#victory-message,
+#loss-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 9999;
+}
+
+#victory-message p,
+#loss-message p {
+  margin: 0;
+}
+
+#restart-button {
+  display: block;
+  margin: 20px auto;
+  background-color: #007bff;
+  color: #fff;  
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* Estilos para el contenedor del juego */
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* Estilos para la imagen del ahorcado */
+#hangman-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Ajusta el margen derecho para separarlo del teclado */
+}
+.inicio {
+  font-size: 3em;
+}
+
+
+/* Estilos para hacer la página responsiva */
+@media screen and (max-width: 768px) {
+  main {
+      flex-direction: column;
+      /* Cambiar a diseño de columna en dispositivos pequeños */
+  }
+
+  section {
+      flex: 1;
+      /* La sección ocupará todo el espacio disponible en dispositivos pequeños */
+  }
+
+  aside {
+      flex: 1;
+      /* El aside ocupará todo el espacio disponible en dispositivos pequeños */
+  }
+}
+
+/* Estilos para los botones de juego */
+.juego-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 20px;
+}
+
+/* Estilos para los botones "Iniciar Tateti" e "Iniciar Ahorcado" */
+.juego-button {
+  padding: 25px 30px; /* Aumentamos el padding para hacer los botones más grandes */
+  margin: 20px 0;
+  font-size: 2em; /* Aumentamos el tamaño de la letra */
+  background-color: #3498db; /* Cambiamos el color a celeste */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.juego-button:hover {
+  background-color: #2980b9; /* Color de fondo al pasar el cursor */
+}
+
+#word-container, #guesses-container, #guesses, #attempts, #hangman-container{
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* Estilo para el botón "Reiniciar Juego" al pasar el mouse sobre él */
+#restart-button:hover {
+  font-weight: bolder;
+  background-color: white;
+  color: #007bff; /* Cambiar el color de fondo al pasar el mouse sobre el botón */
+}
+/* Agrega estas reglas de estilo a tu archivo de estilos (ahorcado.css) */
+#info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

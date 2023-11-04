@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Juegos</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/principal/style.css">
+    <link rel="stylesheet" href="styles/juegos/ahorcado.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Icono del navegador -->
+    <link rel="shortcut icon" href="imagenes/icononav.ico" type="image/x-icon">
+
+    
+    
+</head>
+
+<body>
+    <body>
+ 
+        <header> 
+        <div class="encabezado-logo">
+            <a href="index.html"><img id="imagenlogo" src="Assets/principal/logojuegos.png" alt="logoprincipal"></a>
+        </div> 
+        <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">&#9776;</span>
+            </label>
+        <nav class="encabezado-nav">
+    
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quiensomos.html">Quienes Somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </nav>
+        
+    </header>
+    <!-- Principal del juego Ahorcado -->
+    <section id="pantalla-inicial">
+        <audio id="musicaFondo" src="Assets/sonidos/musica.mp3" preload="auto" loop></audio>
+        <audio id="soundCorrect" src="Assets/sonidos/correct-ding.mp3"></audio>
+        <audio id="soundIncorrect" src="Assets/sonidos/incorrect-ding.mp3"></audio>
+        <audio id="soundWin" src="Assets/sonidos/sonidoGanador.mp3"></audio>
+        <audio id="soundLose" src="Assets/sonidos/sonidoPerdedor.mp3"></audio>
+
+
+        <h1>AHORCADO</h1>
+        <p>¡Bienvenidos al emocionante juego de Pasapalabra en Game Center! Prepárate para poner a prueba tus conocimientos en el fascinante mundo de la informática, la programación y la tecnología. En este desafiante rosco, te enfrentarás a una variedad de preguntas diseñadas para poner a prueba tu comprensión de conceptos clave, términos técnicos y avances recientes en el campo de la tecnología.
+    
+            Desde el software hasta el hardware, desde los lenguajes de programación hasta las últimas tendencias en la industria tecnológica, cada pregunta te desafiará a demostrar tu experiencia y tu dominio en este apasionante campo en constante evolución.
+                
+            ¡Demuestra tus habilidades y conocimientos mientras te sumerges en el apasionante mundo de la informática y la tecnología! ¿Estás listo para aceptar el reto y convertirte en el maestro del Pasapalabra tecnológico? ¡Que comience la aventura del conocimiento!</p>
+        <button id="comenzar">COMENZAR JUEGO</button>
+    </section>
+    <main class="container" id="game-container" style="display: none;">
+        <div id="game-status">
+            <div id="word-container">
+                <!-- Aquí se mostrará la palabra oculta -->
+            </div>
+            <div id="guesses-container">
+                <div id="guesses">
+                    <!-- Aquí se mostrarán las letras adivinadas -->
+                </div>
+                <div id="attempts">
+                    <!-- Aquí se mostrará el número de intentos restantes -->
+                </div>
+                <div id="puntaje-container">
+                    <!-- Aquí se mostrará el puntaje acumulado -->
+                </div>
+            </div>
+        </div>
+        <div id="hangman-container">
+            <img id="hangman" src="" alt="Ahorcado">
+        </div>
+
+        <div id="keyboard">
+            <!-- Aquí se mostrará el teclado virtual -->
+        </div>
+        <div id="victory-message" class="hidden">
+            <p id="victory-text"></p>
+        </div>
+        <div id="loss-message" class="hidden">
+            <p id="loss-text"></p>
+        </div>
+        <button id="restart-button" class="hidden" onclick="restartGame()">Reiniciar Juego</button>
+    </main>
+     <!-- Pie de página, copyright, etc -->
+     <footer>
+        <div>
+            <a href="https://es-la.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="Assets/principal/faceicon.png" alt=""></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="Assets/principal/twiticon.png" alt=""></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="Assets/principal/instaicon.png" alt=""></a>
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer"><img src="Assets/principal/giticon.png" alt=""></a>
+        
+            <p>© Copyright 2023, Game Center. Todos los derechos reservados. Parcial Seminario de Programación.</p>
+        </div>
+        </footer>
+    <script src="./js/ahorcado.js"></script>
+</body>
+
+</html>

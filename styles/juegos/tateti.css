@@ -1,0 +1,203 @@
+/* Estilos para tateti.html */
+body {
+    /* Configuración de la imagen de fondo */
+    background-image: url(../../Assets/tateti/rm222batch5-mind-09.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+ 
+  #pantalla-inicial{
+    display: block;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background:rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 20px; 
+  }
+  #pantalla-inicial h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color:#0a597a;
+  }
+  
+  #pantalla-inicial p{
+    font-weight: bolder;
+    color:#080808;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  
+  #comenzar{
+    background-color: #c466fc;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 30px;
+    border-bottom: 4px solid #4b0872;
+  }
+  
+  #comenzar:hover{
+    border-bottom: 4px solid transparent;
+    background-color: #7705b9;
+  }
+  
+#principaljuego {
+    display: flex;
+    /* El main ocupa todo el espacio disponible */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+
+    
+}
+
+#game-container {
+    background: linear-gradient(135deg, #4CAF50, #388E3C); /* Cambia el color de fondo del juego */
+    padding: 20px;
+    border: 1px solid #f3ecec; /* Agrega un borde al contenedor del juego */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra al contenedor */
+
+}
+#contenedorGrilla{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+    
+    height: fit-content;
+    margin: 0;
+    padding: auto;
+    overflow: hidden;
+    }
+
+/* Estilos para hacer la página responsiva */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        /* Cambiar a diseño de columna en dispositivos pequeños */
+    }
+}
+:root{
+    --color-primario: rgb(28, 0, 34);
+    --line-style: 10px solid var(--color-primario);
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 4rem;
+    color: var(--color-primario);
+}
+
+
+
+.cuadrado{
+    background-color: #d8eff5;
+    color: var(--color-primario);
+    overflow: 9rem;
+    height: 9rem;
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 8rem;
+    transition: 50ms ease-in-out;
+}
+
+.arriba{
+    border-bottom: var(--line-style);
+}
+
+.medio{
+    border-left: var(--line-style);
+    border-right: var(--line-style);
+}
+
+.abajo{
+    border-top: var(--line-style);
+}
+
+.ganador{
+    background-color: rgb(249, 198, 31);
+}
+
+dialog{
+    text-align: center;
+    min-width: 50vw;
+    background-color: rgba(240, 248, 255, 0.23);
+    padding: 5rem;
+    border: unset;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(3px);
+}
+
+dialog h2{
+    font-family: var(--font-family);
+    font-size: xx-large;
+}
+
+dialog button{
+    font-size: larger;
+    padding: 1rem;
+}
+
+
+
+/* Estilos para el puntaje */
+#puntaje-container {
+    position: absolute;
+    left: 5%; 
+    top: 20%; 
+    min-width: 15%;
+    padding: 1rem;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 15%, rgba(57,4,77,1), rgba(116,9,121,1));
+    border-radius: 10% 0;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 0.8rem; 
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    margin: 0;
+    box-shadow: 0 0 0.2em rgba(249, 248, 252, 0.629), 0 0 0.5em rgba(95, 174, 226, 0.748) ;
+  }
+  
+
+  /* Estilos para el indicador de jugador */
+.jugador-indicador {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    padding: 1rem;
+    min-width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    background: linear-gradient(90deg, rgba(2,0,36,1), rgb(14, 111, 143));
+    border-radius: 10% 0;
+    font-size: 0.8rem; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    margin: 0;
+    box-shadow: 0 0 0.2em rgba(249, 248, 252, 0.629), 0 0 0.5em rgba(95, 174, 226, 0.748) ;
+}
+
+.reglastateti {
+    position: absolute;
+    top: 10%;
+    float: left;
+    color: aliceblue;
+    margin: 2rem;
+    text-align: center;
+}
+.reglastateti h2 {
+    font-family:  'Press Start 2P', cursive;
+
+}

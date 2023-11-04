@@ -1,0 +1,40 @@
+html {
+    font-size: 1rem;
+    height: 100%;
+  }
+  
+  body, header, main, footer {
+    min-height: 50px;
+    margin: 0;
+    min-width: 400px;
+  }
+
+  
+  body {
+    margin-top: auto;
+    background-color: black;
+  }
+  
+  main {
+    min-height: 200px;
+    overflow: auto;
+  }
+  
+
+  #menu, #menu-check {
+    display: none;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Cambia el color de fondo según tus preferencias */
+    padding: 0px; /* Añade un relleno para espaciar el contenido del footer */
+  }
+
+
+
+
+
